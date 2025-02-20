@@ -4,9 +4,10 @@ import org.apache.commons.lang3.math.NumberUtils;
 
 public class StringUtils {
     public static boolean isPositiveNumber(String str) {
-        if (str == null || !NumberUtils.isParsable(str.trim())) {
+        try {
+            return str != null && str.matches("\\d+") && Integer.parseInt(str) > 0;
+        } catch (NumberFormatException e) {
             return false;
         }
-        return Double.parseDouble(str.trim()) > 0;
     }
 }
