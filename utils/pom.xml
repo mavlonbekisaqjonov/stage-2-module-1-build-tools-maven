@@ -11,7 +11,7 @@
     </parent>
 
     <!-- Use a specific groupId for the utils module -->
-    <groupId>org.example.utils</groupId>
+    <groupId>com.epam.utils</groupId>
     <artifactId>utils</artifactId>
     <version>1.3.5</version>
 
