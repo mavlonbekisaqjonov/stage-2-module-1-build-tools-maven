@@ -4,22 +4,23 @@ import org.apache.commons.lang3.math.NumberUtils;
 
 public class StringUtils {
     /**
-     * Checks if the input string represents a positive number.
-     * Returns false if the string is null, empty, or not a valid number.
+     * Returns true if the input string represents a valid number that is greater than zero.
+     * Returns false if the string is null, empty, not a valid number, or not positive.
      */
     public static boolean isPositiveNumber(String str) {
         if (str == null || str.trim().isEmpty()) {
             return false;
         }
-        // Trim and check if it's a valid number using Apache Commons Lang
-        if (!NumberUtils.isCreatable(str.trim())) {
+        String trimmed = str.trim();
+        // Use Apache Commons Lang to check if the string can be parsed as a number
+        if (!NumberUtils.isCreatable(trimmed)) {
             return false;
         }
-        // Parse the number and check if it's greater than zero
         try {
-            return Double.parseDouble(str.trim()) > 0;
+            return Double.parseDouble(trimmed) > 0;
         } catch (NumberFormatException e) {
             return false;
         }
     }
 }
+

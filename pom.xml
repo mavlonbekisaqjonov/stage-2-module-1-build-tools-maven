@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
@@ -16,7 +17,7 @@
 
     <properties>
         <junit.version>5.8.1</junit.version>
-        <!-- You can update the plugin versions if desired -->
+        <!-- Updated compiler plugin version for Java 8 compatibility -->
         <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
     </properties>
 
@@ -33,7 +34,7 @@
 
     <build>
         <plugins>
-            <!-- Maven Compiler Plugin: Ensures compatibility with Java 8 -->
+            <!-- Maven Compiler Plugin: Ensure Java 8 is used -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>

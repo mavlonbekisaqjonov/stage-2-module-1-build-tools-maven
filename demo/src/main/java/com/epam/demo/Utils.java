@@ -5,10 +5,10 @@ import java.util.List;
 
 public class Utils {
     /**
-     * Checks if all strings in the list represent positive numbers.
+     * Returns true if all strings in the list represent positive numbers,
+     * using the isPositiveNumber() method from StringUtils.
      */
     public static boolean isAllPositiveNumbers(List<String> args) {
-        // Returns true if every element in the list is a positive number
         return args.stream().allMatch(StringUtils::isPositiveNumber);
     }
 }
